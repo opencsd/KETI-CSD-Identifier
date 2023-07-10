@@ -1,0 +1,1 @@
+g++ CSDProxy.cc -o CSDProxy -lpthread
