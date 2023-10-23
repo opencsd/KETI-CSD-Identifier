@@ -19,8 +19,9 @@ Developed by KETI
 
 ## How To Build
 -------------
-> g++ CSDProxy.cc -o CSDProxy -lpthread
-
+```bash
+g++ CSDProxy.cc -o CSDProxy -lpthread
+```
 
 ## Governance
 -------------
