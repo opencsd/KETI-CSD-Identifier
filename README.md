@@ -3,9 +3,7 @@
 
 Host Server Proxy Module For CSD Worker Module In CSD Device
 
-![csdproxy](https://github.com/opencsd/KETI-CSD-Proxy/assets/57175313/c2fe40ff-70bc-40fd-9fdf-713ab60939b8)
-
-<img src = https://github.com/opencsd/KETI-CSD-Proxy/assets/57175313/c2fe40ff-70bc-40fd-9fdf-713ab60939b8>
+<img src = https://github.com/opencsd/KETI-CSD-Proxy/assets/57175313/c2fe40ff-70bc-40fd-9fdf-713ab60939b8 width="50%" height="50%">
 
 Developed by KETI
 
