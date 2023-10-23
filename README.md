@@ -11,18 +11,15 @@ Developed by KETI
 
 [2. How To Install](#How-To-Install)
 
-[3. Modules](#modules)
-
-[4. Governance](#governance)
+[3. Governance](#governance)
 
 ## Requirement
 -------------
->   gcc-11
+> g++-11
 
-
-## How To Install
+## How To Build
 -------------
-# How To Build
+> g++ CSDProxy.cc -o CSDProxy -lpthread
 
 
 ## Governance
