@@ -3,7 +3,7 @@
 
 KETI-CSD-Proxy is a proxy module for communication between the Storage Engine and the CSD's Worker Module.
 
-<img src = https://github.com/opencsd/KETI-CSD-Proxy/assets/57175313/c2fe40ff-70bc-40fd-9fdf-713ab60939b8 width="90%" height="90%">
+<img src = https://github.com/opencsd/KETI-CSD-Proxy/assets/57175313/c2fe40ff-70bc-40fd-9fdf-713ab60939b8 width="80%" height="80%">
 
 
 ## Contents
