@@ -22,6 +22,8 @@ A proxy module for communication between the Storage Engine and the CSD's Worker
 g++ CSDProxy.cc -o CSDProxy -lpthread
 ```
 
+## How It Works
+-------------
 <img src = https://github.com/opencsd/KETI-CSD-Proxy/assets/57175313/c2fe40ff-70bc-40fd-9fdf-713ab60939b8 width="80%" height="80%">
 
 ## Governance
