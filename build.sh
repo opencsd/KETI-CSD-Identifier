@@ -1,1 +1,1 @@
-g++ CSDProxy.cc -o CSDProxy -lpthread
+g++ CSDProxy.cc -o csd-identifier -lpthread
