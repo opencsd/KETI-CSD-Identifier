@@ -1,0 +1,82 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: csd-identifier
+  namespace: storage-platform
+  labels:
+    name: csd-identifier
+spec:
+  type: NodePort
+  ports:
+  - name: http
+    port: 40300
+    targetPort: 40300
+    nodePort: 30300
+    protocol: TCP
+  selector:
+    app: csd-identifier
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: csd-identifier
+  namespace: storage-platform
+---
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: csd-identifier
+  namespace: storage-platform
+subjects:
+- kind: ServiceAccount
+  name: csd-identifier
+  namespace: storage-platform
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: csd-identifier
+  name: csd-identifier
+  namespace: storage-platform
+spec:
+  selector:
+    matchLabels:
+      app: csd-identifier
+  template:
+    metadata:
+      labels:
+        app: csd-identifier
+      name: csd-identifier
+    spec:
+      serviceAccountName: csd-identifier
+      imagePullSecrets:
+        - name: regcred
+      containers:
+        - name: query-engine
+          image: ketidevit2/csd-identifier:v1.0
+          imagePullPolicy: Always
+          volumeMounts:
+            - name: tz-config
+              mountPath: /etc/localtime
+            - name: config
+              mountPath: /root/.kube/  
+          resources:
+            limits:
+              memory: "200Mi"
+            requests:
+              memory: "200Mi"
+          env:
+          - name: LOG_LEVEL
+            value: "INFO"
+      volumes:
+        - name: tz-config
+          hostPath:
+            path: /usr/share/zoneinfo/Asia/Seoul
+        - name: config
+          hostPath:
+            path: /root/.kube
